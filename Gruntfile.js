@@ -39,6 +39,7 @@ module.exports = function (grunt) {
         push: true,
         message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
+      
       pages: {
         options: {
           remote: 'git@github.com:ThomasKDesign/PadFinder.git',
