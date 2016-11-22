@@ -39,14 +39,14 @@ module.exports = function (grunt) {
         push: true,
         message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
-      
+
       pages: {
         options: {
           remote: 'git@github.com:ThomasKDesign/PadFinder.git',
           branch: 'gh-pages'
         }
       }
-    }
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
