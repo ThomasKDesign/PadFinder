@@ -1,0 +1,31 @@
+
+body {
+	padding: none;
+	margin: none;
+	color : #E04F1D;
+}
+
+.appWrapper {
+	background: url(../images/12Man-on-Space-Needle-at-night-panorama.jpg) no-repeat center top;
+	margin: none;
+	padding: none;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+
+	   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.footer p {
+
+  position: absolute bottom;
+  margin-top: 285px;
+  padding-bottom: 15px;
+
+ 
+}

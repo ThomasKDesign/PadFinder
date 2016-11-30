@@ -1,7 +1,23 @@
-<div class="jumbotron">
-  <h3>Find your next pad</h3>
-
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Begin your search here...!</a></p>
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h3>Look Up My Neighborhoods</h3>
+  <p class="lead">
+    <div ng-init="city='Seattle'">
+        <p>
+          <label for="city">My City:
+            <input type="text" name="city" ng-model="city">
+          </label>
+        </p>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Get City Neighborhoods</button>
+        </p>
+      <dl>
+        <dt>Neighborhoods</dt>
+        <dd>{{neighborhood.name[0].main}}</dd>
+        <!-- <dd>{{current.weather[0].description}}</dd> -->
+      
+      </dl>
+    </div>
+  </p>
 </div>
 
 

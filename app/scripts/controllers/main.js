@@ -7,11 +7,12 @@
  * # MainCtrl
  * Controller of the padFinderApp
  */
-angular.module('padFinderApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('padFinderApp',['ngResource']);
+	var MainCtrl = function($scope,'neighborhood' ) {
+
+	//This is the callback function
+    setData = function(data) {
+        $scope.dataSet = data;
+	}
+	neighborhood.get(setData);
+}
