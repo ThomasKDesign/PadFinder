@@ -1,31 +1,34 @@
 
-body {
-	padding: none;
-	margin: none;
-	color : #E04F1D;
-}
-
 .appWrapper {
 	background: url(../images/12Man-on-Space-Needle-at-night-panorama.jpg) no-repeat center top;
 	margin: none;
 	padding: none;
 	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
+	background-attachment: absolute;
+	min-height: 750px;
 	width: 100%;
-
-	   -webkit-background-size: cover;
-    -moz-background-size: cover;
+	  -webkit-background-size: cover;
+     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
 }
 .footer p {
-
-  position: absolute bottom;
-  margin-top: 285px;
+  position: fixed;
+  Width: 100%;
+  bottom: 0;
+  margin-left: 10px;
   padding-bottom: 15px;
 
- 
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+  text-shadow: -3px 3px #E04F1D;
+  font-weight: 450;
+}
+
+h4 {
+	color: #E04F1D;
 }

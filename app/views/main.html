@@ -1,20 +1,24 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h3>Look Up My Neighborhoods</h3>
+  <h1>Select Your City</h1>
   <p class="lead">
-    <div ng-init="city='Seattle'">
+    <div ng-init="location='Seattle'">
         <p>
-          <label for="city">My City:
-            <input type="text" name="city" ng-model="city">
+          <label for="location">Location:
+            <input type="text" name="location" ng-model="location">
           </label>
         </p>
         <p>
-          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Get City Neighborhoods</button>
+          <button class="btn btn-lg btn-primary" ng-click="findCities()">Find City</button>
         </p>
-      <dl>
-        <dt>Neighborhoods</dt>
-        <dd>{{neighborhood.name[0].main}}</dd>
-        <!-- <dd>{{current.weather[0].description}}</dd> -->
-      
+    </div>
+    <div ng-if="searchQuery">
+      <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
+      <dl ng-repeat="city in citiesFound.list">
+        <dt>{{city.name}}, {{city.sys.country}}</dt>
+        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+        <dt>Temperature</dt>
+        <dd>{{city.main.temp}} &deg;F</dd>
+        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
       </dl>
     </div>
   </p>

@@ -12,6 +12,8 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- custom h2 font link -->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <!-- endbuild -->
   </head>
   <body ng-app="padFinderApp">
@@ -20,43 +22,35 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+    
+     <div class="appWrapper">
+     <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Your Neighborhoods</a></li>
+          <li><a href="#">For Rent</a></li>
+          <li><a href="#">My Favorite Pads</a></li>
+        </ul>
+        <h4 class="brand">PadFinder</h4>
+      </div>
 
-            <a class="navbar-brand" href="#/">padFinder</a>
-          </div>
+      <div class="jumbotron">
+        <h1><font color="white">Find your next Pad...!</font></h1>
+        <p class="lead"></p>
+        <p><a class="btn btn-lg btn-success" href="#">Begin your Search</a></p>
+    
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/main">Home</a></li>
-              <li><a ng-href="#/Buying">Homes for Sale</a></li>
-              <li><a ng-href="#/Renting">Rentals</a></li>
-              <li><a ng-href="#/Favorites">Favorite Pads</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="footer">
+        <p>&copy; Thomas Kaiaua</p>
       </div>
     </div>
-
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p>&copy;Thomas Kaiaua</p>
-      </div>
-    </div>
+    </div><!-- appWrapper -->
+    </body>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

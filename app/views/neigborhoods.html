@@ -1,0 +1,23 @@
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h3>Neighborhoods for {{city.name}}</h3>
+  <p class="lead">
+    <div ng-init="city='Seattle'">
+        <p>
+          <label for="city">My City:
+            <input type="text" name="city" ng-model="city">
+          </label>
+        </p>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Get City Neighborhoods</button>
+        </p>
+      <dl>
+        <dt>Neighborhoods</dt>
+        <dd>{{neighborhood.neighborhood.name[0].name}}</dd>
+        <!-- <dd>{{current.weather[0].description}}</dd> -->
+      
+      </dl>
+    </div>
+  </p>
+</div>
+
+

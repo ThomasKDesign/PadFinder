@@ -10,6 +10,7 @@
  */
 angular
   .module('padFinderApp', [
+    'cb.x2js',
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -21,12 +22,17 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
+      .when('/My Neighborhoods', {
+        templateUrl: 'views/neighborhoods.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
+      .when('/Rentals', {
+        templateUrl: 'views/renting.html',
+        controller: 'Rentals',
+        controllerAs: 'nei'
+      })
+      .when('/', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'

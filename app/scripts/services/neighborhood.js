@@ -8,20 +8,20 @@
  * Factory in the padFinderApp.
  */
 angular.module('padFinderApp', [])
-.factory('neighborhood', ['$resource', function ($resource) {
+.factory('neighborhood', ['$resource', 'x2js' function ($resource, x2js) {
     // Service logic
     // ...
 
 
     // Public API here
-    return $resource('http://www.zillow.com/webservice/GetRegionChildren.htm?q=seattle&zws-id=X1-ZWz19h9aqz93ij_7oq0o&state=wa&city=seattle&childtype=neighborhood' , {}, {
+    return $resource('http://www.zillow.com/webservice/GetRegionChildren.htm?q=city=&zws-id=X1-ZWz19h9aqz93ij_7oq0o&state=wa&city=seattle&childtype=neighborhood' , {}, {
         query: {
          method:'GET',
          params:{
            city: 'Seattle,us',
            bogus: null
          },
-         isArray:false,
+         isArray:true,
          transformResponse:function(data) {
         // convert the data to JSON and provide
         // it to the success function below
@@ -30,17 +30,6 @@ angular.module('padFinderApp', [])
           return json;
           } 
          }  
-      }).
-      success(function(data, status) {
-                // send the converted data back
-                // to the callback function
-                callback(data);
-        
-            })
-          } 
-        }  
-    }]);
+      });
+  }]);
 
-
-
- 
