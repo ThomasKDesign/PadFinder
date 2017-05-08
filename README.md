@@ -1,2 +1,2 @@
-# PadFinder
-An AngularJS app for finding places to live in the Seattle area.
+# SeattleRentals
+An Angular app for searching rentals and neighborhoods in the Seattle area.
